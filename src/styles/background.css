@@ -1,0 +1,7 @@
+.background {
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    opacity: 30%;
+    mix-blend-mode: darken;
+}
