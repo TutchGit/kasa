@@ -1,14 +1,15 @@
-import '../styles/Thumb.css'
-import { appartements } from '../datas/data'
+import '../styles/Thumb.css';
+import { appartements } from '../datas/data';
+import Appartement from './Appartement';
 
 function Thumb() {
+    
     return (
-        {appartements.map((title, cover, id) => (
-            <div className="thumb" key={`${id}`}>
-                <img src={`${cover}`} alt={`${title}`} />
-                <p className="thumb_title">{title}</p>
-            </div>
-        )}
+        <div className='appartements_list'>
+            {appartements.map((appartement) => (
+                <Appartement key={appartement.id} appartement={appartement}/>
+            ))}
+        </div>
     )
 }
 

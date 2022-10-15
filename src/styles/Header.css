@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px 0 30px;
+}
+
+.logo {
+    width: 210px;
+    height: auto;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    font-size: 24px;
+    color: #FF6060;
+}

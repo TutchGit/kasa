@@ -1,0 +1,30 @@
+.infos_appartement {
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: #FF6060;
+}
+
+.info_appartement_name {
+    margin: 0;
+    font-size: 36px;
+}
+
+.info_appartement_location {
+    font-size: 18px;
+}
+
+.info_owner {
+    display: flex;
+    justify-content: end;
+    font-size: 18px;
+}
+
+.info_owner_img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}

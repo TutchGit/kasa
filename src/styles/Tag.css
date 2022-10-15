@@ -1,3 +1,7 @@
+.info_tag {
+    display: flex;
+}
+
 .tag {
     background-color: #FF6060;
     border-radius: 10px;
@@ -8,9 +12,7 @@
     font-weight: 500;
     font-size: 14px;
     color: white;
-}
-
-.tag-title {
-    display: flex;
-    justify-content: center;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 25px;
 }
