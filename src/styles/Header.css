@@ -15,5 +15,32 @@
     justify-content: space-around;
     width: 250px;
     font-size: 24px;
+}
+
+.nav_menu a {
     color: #FF6060;
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
+}
+
+@media screen and (max-width: 426px) {
+    .navbar {
+        margin: 0;
+    }
+
+    .nav_menu {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
 }

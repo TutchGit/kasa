@@ -1,5 +1,3 @@
-import '../styles/Rating.css'
-
 function Rating(props) {
     const range = [1, 2, 3, 4, 5]
     const rating = props.rating
@@ -7,8 +5,8 @@ function Rating(props) {
         <div className='info_rating'>
             {range.map((rangeElem) => {
                 return rating >= rangeElem ? (
-                    <p>1</p>
-                ) : <p>2</p>
+                    <i className={`fa-solid fa-star star fill_star`}></i>
+                ) : <i className={`fa-solid fa-star star empty_star`}></i>
             })}
         </div>
     )

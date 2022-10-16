@@ -1,11 +1,3 @@
-.main_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #FF6060;
-}
-
 .number_error {
     font-weight: 700;
     font-size: 288px;
@@ -22,4 +14,23 @@
     font-weight: 500;
     font-size: 18px;
     margin-top: 100px;
+}
+
+@media screen and (max-width: 426px) {
+    .number_error {
+        font-size: 96px;
+        margin-top: 33%;
+    }
+
+    .error_message {
+        width: 200px;
+        word-break: break-word;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .error_back {
+        font-size: 14px;
+        margin-bottom: 45%;
+    }
 }

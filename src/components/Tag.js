@@ -1,5 +1,3 @@
-import '../styles/Tag.css';
-
 function Tag(props) {
   const tags = props.tags
   return (

@@ -34,3 +34,13 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 426px) {
+    .appartements_list {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        margin: 0;
+        padding: 25px 0;
+        background-color: white;
+    }
+}

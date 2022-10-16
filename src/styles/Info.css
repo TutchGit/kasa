@@ -1,10 +1,16 @@
 .infos_appartement {
     width: 100%;
-    justify-content: space-between;
+    height: 180px;
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
     color: #FF6060;
+    grid-template-areas: "one two"
+                         "three four";
+}
+
+.info_appartement {
+    grid-area: one;
 }
 
 .info_appartement_name {
@@ -20,6 +26,15 @@
     display: flex;
     justify-content: end;
     font-size: 18px;
+    grid-area: two;
+}
+
+.info_owner_name {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: Right;
+    vertical-align: Bottom;
+    margin-right: 10px;
 }
 
 .info_owner_img {
@@ -27,4 +42,99 @@
     height: 64px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.info_tag {
+    display: flex;
+    grid-area: three;
+}
+
+.tag {
+    background-color: #FF6060;
+    border-radius: 10px;
+    width: 115px;
+    height: 25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.info_rating {
+    display: flex;
+    justify-content: end;
+    grid-area: four;
+}
+
+.star {
+    width: 30px;
+    height: auto;
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.fill_star {
+    color: #FF6060;
+}
+
+.empty_star {
+    color: #E3E3E3;
+}
+
+@media screen and (max-width: 426px) {
+    .infos_appartement {
+        width: 90%;
+        height: 250px;
+        margin-top: 10px;
+        grid-template-areas: "one one"
+                             "three three"
+                             "four two";
+    }
+
+    .infos_appartement .info_owner:nth-of-type(2) {
+        order: 4;
+    }
+
+    .infos_appartement .info_tag:nth-of-type(3) {
+        order: 2;
+    }
+
+    .infos_appartement .info_rating:nth-of-type(4) {
+        order: 3;
+    }
+
+    .info_rating {
+        align-items: center;
+        justify-content: start;
+    }
+
+    .star {
+        font-size: 18px;
+        width: auto;
+    }
+
+    .info_owner {
+        align-items: center;
+    }
+
+    .info_owner_name {
+        font-size: 16px;
+    }
+
+    .info_owner_img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .info_tag {
+        height: 50px;
+    }
+
+    .tag {
+        border-radius: 5px;
+    }
 }

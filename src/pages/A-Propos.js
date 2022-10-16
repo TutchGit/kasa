@@ -26,7 +26,7 @@ function Propos() {
 
     return (
         <div className="main_content">
-            <Background className="home_img" img={About} />
+            <Background className="about_img" img={About} />
             <div className="dropdown_about">
                 {aboutDropdown.map((info) => {
                     return <Dropdown title={info.title} content={info.content} isList={false} classNameDescription="dropdown_description_about" classNameDisplay="dropdown_display_about" />
