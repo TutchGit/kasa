@@ -16,8 +16,17 @@
   margin: 0 70px;
 }
 
+.main_content_home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+  margin: 0 15%;
+}
+
 @media screen and (max-width: 426px) {
     .main_content {
-      margin: 0;
+      margin: 0 15px;
     }
 }

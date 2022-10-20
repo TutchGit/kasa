@@ -78,6 +78,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    gap: 5%;
 }
 
 .dropdown_content {
@@ -102,8 +103,8 @@
     }
 
     .dropdown_fiche {
-        width: 90%;
         flex-direction: column;
+        margin: 20px 0;
     }
 
     .dropdown_display_fiche {

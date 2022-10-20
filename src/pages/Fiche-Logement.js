@@ -1,4 +1,4 @@
-import Background from '../components/Background';
+import Carouselle from '../components/Carouselle';
 import Info from '../components/Info';
 import Dropdown from '../components/Dropdown';
 import '../styles/App.css';
@@ -25,7 +25,7 @@ function FicheLogement() {
 
     return (
         <div className="main_content">
-            <Background className="fiche_img" img={appartement.cover}/>
+            <Carouselle className="fiche_img_content" pictures={appartement.pictures} title={appartement.title}/>
             <Info
             title={appartement.title}
             location={appartement.location}
@@ -35,10 +35,9 @@ function FicheLogement() {
             rating={appartement.rating} />
             <div className='dropdown_fiche'>
                 {infoDropdown.map((info) => {
-                    return <Dropdown title={info.title} content={info.content} isList={info.isList} classNameDescription="dropdown_description_fiche" classNameDisplay="dropdown_display_fiche" />
+                    return <Dropdown key={info.title} title={info.title} content={info.content} isList={info.isList} classNameDescription="dropdown_description_fiche" classNameDisplay="dropdown_display_fiche" />
                 })}
             </div>
-            
         </div>
     )
 }

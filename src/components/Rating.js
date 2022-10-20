@@ -5,8 +5,8 @@ function Rating(props) {
         <div className='info_rating'>
             {range.map((rangeElem) => {
                 return rating >= rangeElem ? (
-                    <i className={`fa-solid fa-star star fill_star`}></i>
-                ) : <i className={`fa-solid fa-star star empty_star`}></i>
+                    <i className={`fa-solid fa-star star fill_star`} key={rangeElem}></i>
+                ) : <i className={`fa-solid fa-star star empty_star`} key={rangeElem}></i>
             })}
         </div>
     )

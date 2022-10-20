@@ -25,9 +25,11 @@ function Dropdown(props) {
             :
         <div className={props.classNameDisplay} onClick={() => isOpen(!open)}>
             {open
-            ?   <div className='dropdown_container'><div className={props.classNameDescription} key={props.title} >
-                    <p className='dropdown_title'>{props.title}</p>
-                    <div className='dropdown_icon'><i className="fa-solid fa-chevron-up"></i></div>
+            ?   <div className='dropdown_container'>
+                    <div className={props.classNameDescription} key={props.title} >
+                        <p className='dropdown_title'>{props.title}</p>
+                        <div className='dropdown_icon'><i className="fa-solid fa-chevron-up"></i>
+                    </div>
                 </div>
             <p className='dropdown_content'>{props.content}</p></div>
             :   <div className={props.classNameDescription} key={props.title} >

@@ -1,0 +1,43 @@
+.carouselle {
+    width: 100%;
+    position: relative;
+}
+
+.fiche_img_content {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+}
+
+.fiche_img {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.previous_img {
+    font-size: 120px;
+    color: white;
+}
+
+.next_img {
+    font-size: 120px;
+    color: white;
+}
+
+@media screen and (max-width: 426px) {
+    .fiche_img {
+        border-radius: 10px;
+    }
+}

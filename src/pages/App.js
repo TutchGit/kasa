@@ -5,7 +5,7 @@ import Home from '../assets/backgroundHome.png'
 
 function App() {
   return (
-    <div className='main_content'>
+    <div className='main_content_home'>
       <Background className="home_img" img={Home} title="Chez vous, partout et ailleurs" />
       <Thumb />
     </div>
