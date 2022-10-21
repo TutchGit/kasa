@@ -99,7 +99,7 @@
 
 @media screen and (max-width: 426px) {
     .dropdown_about {
-        width: 90%;
+        width: 100%;
     }
 
     .dropdown_fiche {
