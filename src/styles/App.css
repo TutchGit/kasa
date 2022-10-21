@@ -1,3 +1,7 @@
+* {
+  font-family: "montserrat", Impact, 'Arial Narrow Bold', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -28,5 +32,9 @@
 @media screen and (max-width: 426px) {
     .main_content {
       margin: 0 15px;
+    }
+
+    .main_content_home {
+      margin: 0 5%;
     }
 }

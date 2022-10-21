@@ -40,4 +40,13 @@
     .fiche_img {
         border-radius: 10px;
     }
+
+    .buttons {
+        top: 45%;
+    }
+
+    .previous_img, .next_img {
+        font-size: 40px;
+
+    }
 }
