@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react'
 import '../styles/Carouselle.css'
 
@@ -15,7 +16,7 @@ function Carouselle(props) {
 
     return (
         <div className='carouselle'>
-            <div className={props.className}>
+            <div className="fiche_img_content">
                 <img className='fiche_img' src={props.pictures[index]} key={props.pictures[index]} alt={props.title} />
             </div>
             <div className='buttons'>
@@ -24,6 +25,11 @@ function Carouselle(props) {
             </div>
         </div>
     )
+}
+
+Carouselle.propTypes = {
+    pictures: PropTypes.array,
+    title: PropTypes.string
 }
 
 export default Carouselle

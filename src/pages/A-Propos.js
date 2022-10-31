@@ -1,9 +1,17 @@
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Background from "../components/Background";
 import Dropdown from "../components/Dropdown";
+
 import '../styles/App.css';
 import '../styles/Background.css'
 import About from '../assets/backgroundPropos.png'
 
+
+/* ---------------------------------------------------------------------------
+Add another array with title and content if another dropdown needed.
+---------------------------------------------------------------------------*/
 function Propos() {
     const aboutDropdown = [
         {
@@ -24,15 +32,34 @@ function Propos() {
         }
     ]
 
+/* ---------------------------------------------------------------------------
+                                ABOUT PAGE
+Return Header, Background, loop on aboutDropdown for Dropdown and Footer comp inside a Fragment
+Background comp props needed :
+    classname => used in "App.js" too with slight difference
+    Img => background image
+Dropdown comp props send :
+    Key => needed for react. Use props.title for simplicity
+    title, content => data used in aboutDropdown
+    isList => Need to be FALSE ! Dropdown display only text and not list in "About"
+    classNameDescription, classNameDisplay =>
+        since dropdown are used in "Fiche-logement.js" too, but are slightly differents,
+        a specific class is needed.
+--------------------------------------------------------------------------- */
+
     return (
-        <div className="main_content_home">
-            <Background className="about_img" img={About} />
-            <div className="dropdown_about">
-                {aboutDropdown.map((info) => {
-                    return <Dropdown key={info.title} title={info.title} content={info.content} isList={false} classNameDescription="dropdown_description_about" classNameDisplay="dropdown_display_about" />
-                })}
+        <React.Fragment>
+            <Header classNameNavAbout="underline" />
+            <div className="main_content_home">
+                <Background className="about_img" img={About} />
+                <div className="dropdown_about">
+                    {aboutDropdown.map((info) => {
+                        return <Dropdown key={info.title} title={info.title} content={info.content} isList={false} classNameDescription="dropdown_description_about" classNameDisplay="dropdown_display_about" />
+                    })}
+                </div>
             </div>
-        </div> 
+            <Footer />
+        </React.Fragment>
     )
 }
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/Dropdown.css'
 import { useState } from 'react';
 
@@ -8,16 +9,16 @@ function Dropdown(props) {
         (props.isList
             ?   <div className={props.classNameDisplay} onClick={() => isOpen(!open)}>
                     {open
-                    ?   <div><div className={props.classNameDescription} >
+                    ?   <div><div className={props.classNameDescription} key={props.title}>
                             <p className='dropdown_title'>{props.title}</p>
                             <i className="fa-solid fa-chevron-up"></i>
                         </div>
                         <div className='dropdown_content'>
                             {props.content.map((content) => {
-                                return <p>{content}</p>
+                                return <p key={content}>{content}</p>
                             })}
                         </div></div>
-                    :   <div className={props.classNameDescription} >
+                    :   <div className={props.classNameDescription} key={props.title}>
                             <p className='dropdown_title'>{props.title}</p>
                             <i className="fa-solid fa-chevron-down"></i>
                         </div> }
@@ -39,6 +40,14 @@ function Dropdown(props) {
             }
         </div>
     ))
+}
+
+Dropdown.propTypes = {
+    isList: PropTypes.bool,
+    classNameDisplay: PropTypes.string,
+    classNameDescription: PropTypes.string,
+    title: PropTypes.string,
+    content: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 }
 
 export default Dropdown

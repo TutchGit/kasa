@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/Background.css'
 
 function Background(props) {
@@ -9,6 +10,11 @@ function Background(props) {
         </div>
     )
 }
-    
+ 
+Background.propTypes = {
+    className: PropTypes.string,
+    img: PropTypes.string,
+    title: PropTypes.string
+}
 
 export default Background

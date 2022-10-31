@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Tag from './Tag';
 import Rating from './Rating';
 import '../styles/Info.css';
@@ -17,6 +18,15 @@ function Info(props) {
             <Rating rating={props.rating} />
         </div>
     )
+}
+
+Info.propTypes = {
+    title: PropTypes.string,
+    location: PropTypes.string,
+    ownerName: PropTypes.string,
+    ownerImg: PropTypes.string,
+    tags: PropTypes.array,
+    rating: PropTypes.string
 }
 
 export default Info
